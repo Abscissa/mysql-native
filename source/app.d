@@ -57,7 +57,7 @@ void testMySql()
 		writeln("\tMultiple result set support");
 	writeln();
 	
-	MetaData md = MetaData(c);
+	MetaData md = MetaData!mySQLSocketVibeD(c);
 	auto dbList = md.databases();
 	writefln("Found %s databases", dbList.length);
 	foreach( db; dbList )
